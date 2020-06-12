@@ -1,4 +1,4 @@
-let publicity = document.getElementById("publicity-background")
+let publicity = document.getElementById("#publicity-background")
 let carrousel = createCarrousel("#publicity-carrousel .publicity","publicity-prev","publicity-next")
 let publicityElements = carrousel.elements
 let publicityQuantity = carrousel.quantity
@@ -42,3 +42,37 @@ function createCarrousel(divs,leftButton,rightButton){
         },600)
     }
 }
+
+let publicityBackground = document.getElementById("publicity-background")
+publicityBackground.addEventListener("click",function(){
+    hideElement("publicity-welcome")
+    
+})
+
+let closePublicity = document.querySelectorAll("#publicity-carrousel .close-article")
+closePublicity.forEach(function(button){
+    button.addEventListener("click",function(){
+        hideElement("publicity-welcome")
+    })
+})
+
+function hideElement(id){
+    let element = document.getElementById(id)
+    element.classList.add("small-resize")
+    setTimeout(function(){
+        element.style.display="none"
+    },1000)
+}
+
+function hideElements(querySelector){
+    document.querySelectorAll(querySelector).forEach(function(element){
+        element.classList.toggle("hide")
+    })
+}
+let publicityCarrousel = document.getElementById("publicity-carrousel")
+let publicityWelcome = document.getElementById("publicity-welcome")
+publicityWelcome.addEventListener("click",function(){
+    if(event.target == publicityCarrousel){
+        hideElement("publicity-welcome")
+    }
+})
