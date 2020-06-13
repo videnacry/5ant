@@ -76,3 +76,11 @@ publicityWelcome.addEventListener("click",function(){
         hideElement("publicity-welcome")
     }
 })
+
+let newStuff = document.querySelector(".publicity audio")
+let playNewStuff = document.getElementById("play-new-stuff")
+playNewStuff.addEventListener("click",function(){
+    newStuff.play()
+    newStuff.controls=true
+    playNewStuff.querySelector("img").src="Src/Assets/pause.png"
+})

@@ -4,6 +4,9 @@
     overflow-x: hidden;
     overflow-y:hidden;
 }
+audio{
+    width:100%;
+}
 .carrousel__prev-item, .carrousel__next-item{
     width:30px;
     height:30px;
@@ -60,6 +63,14 @@
     width:100vw;
     z-index: -1;
 }
+.button{
+    cursor:pointer;
+}
+.rounded-button{
+    cursor:pointer;
+    border-radius: 50%;
+    border:solid 2vw whitesmoke;
+}
 .fade-left{
     transform:translateX(-100%);
     opacity:0;
@@ -74,6 +85,15 @@
 .small-resize,.small-resize *{
     width:0;
     height:0;
+}
+.absolute-center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.transparent{
+    opacity:0.7;
 }
 
 /*------------------------------------------------MEDIA-----------------------------------------------------*/
