@@ -5,28 +5,49 @@
         <link href="Src/style.css" rel="stylesheet">
     </head>
     <body>
+        <div class="page">
+            <div class="page-header bg-too-black">
+                <iframe src="file:///C:/Users/Blein/OneDrive/Documentos/AssemblerProjects/Rick&Morty/index.html" class="header-video"></iframe>
+                <div class="nav row-between">
+                    <button class="nav-drop button-empty"><h1 class="bg-too-black">=</h1></button>
+                    <h1 class="nav-title"><u>Mininakis</u></h1>
+                    <button class="nav-user button-empty"><h1 class="bg-too-black">8</h1></button>
+                </div>
+            </div>
+            <div class="page-body bg-black">
+                <form>
+                    <fieldset class="flex-column">
+                        <label for="submit-art">We and our fans really appreciate fan art, want to send us yours?</label>
+                        <input id="submit-art" class="hide" type="file">
+                    </fieldset>
+                </form>
+                <div>
+                    https://www.theory11.com/
+                </div>
+            </div>
+        </div>
         <div id="publicity-welcome">
-            <div id="publicity-background">
+            <div id="publicity-background" class="publicity-background">
             </div>
             <div id="publicity-carrousel" class="carrousel">
-                <button id="publicity-prev" class="carrousel__prev-item">&lt;</button>
-                <button id="publicity-next" class="carrousel__next-item">&gt;</button>
+                <button id="publicity-prev" class="carrousel__prev-item btn-light rounded-button">&laquo;</button>
+                <button id="publicity-next" class="carrousel__next-item btn-light rounded-button">&raquo;</button>
                 <article class="publicity">
                     <button class="close-article">x</button>
                     <h1>New stuff!</h1>
                     <h2>Trankilo - 5ant</h2>
-                    <button class="button" id="play-new-stuff">
-                        <img src="Src/Assets/play.png" width="30%" class="absolute-center transparent">
+                    <button class="button button-empty" id="play-new-stuff">
+                        <img src="Src/Assets/play.png" width="30%" class="absolute-center transparent" style="z-index:2;">
                     </button>
                     <audio src="Src/Mp3/Death Note OST 1 - 09 Kitai.mp3"></audio>
-                    <img src="Src/Assets/Profile.jpg" class="background-article">
+                    <img src="Src/Assets/Profile.jpg" height="80%" class="background-article">
                 </article>
                 <article class="publicity">
                     <button class="close-article">x</button>
                     <h1>Fan art!</h1>
                     <h2>The 5ant - Gabriel Charlie Santacruz</h2>
                     <h3>I can hear a voice that give me advices</h3>
-                    <img src="Src/Assets/Profile.jpg">
+                    <img src="Src/Assets/Profile.jpg" height="80%">
                 </article>
                 <article class="publicity">
                     <button class="close-article">x</button>

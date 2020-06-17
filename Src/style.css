@@ -2,27 +2,54 @@
     padding:0;
     margin:0;
     overflow-x: hidden;
-    overflow-y:hidden;
+}
+body{
+    overflow-y: auto;
+}
+fieldset{
+    border:none;
+}
+.page{
+    position:absolute;
+    z-index: -1;
+    width:94vw;
+    left:3vw;
+    top:0;
+}
+.page-header{
+}
+.header-video{
+    width:100%;
+    height:40vw;
+}
+.nav{
+    padding:30px 10vw;
+}
+.page-body{
+
 }
 audio{
     width:100%;
 }
 .carrousel__prev-item, .carrousel__next-item{
-    width:30px;
-    height:30px;
+    text-shadow:0 -3px rgb(88, 42, 133);
+    width:45px;
+    height:45px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 35px;
 }
 .carrousel{
-    display: flex;
-    justify-content: space-around;
     height:100vh;
 }
 #publicity-prev,#publicity-next{
     margin-top:50vh;
 }
 #publicity-next{
-    left:70%;
+    transform:translateX(200px)
+}
+#publicity-prev{
+    margin-left:50%;
+    transform:translateX(-300px)
 }
 #publicity-welcome,#publicity-background,.publicity{
     height:100vh;
@@ -30,15 +57,23 @@ audio{
 }
 .publicity{
     position:absolute;
-    min-width: 250px;
-    width:30%;
-    height:90%;
+    padding:20px 10px;
+    overflow: hidden;
+    min-width: 400px;
+    width:40%;
+    height:85%;
     left:50%;
     top:5%;
-    background-color: aliceblue;
-    box-shadow: 0 2px 3px black;
+    background-color: rgb(60,60,60);
+    color:whitesmoke;
+    box-shadow: 0 -2px 2px rgb(229, 255, 0);
     transform:translateX(-50%);
     transition-timing-function: linear;
+}
+.publicity>img{
+    margin-top:10px;
+    margin-left:50%;
+    transform:translateX(-50%);
 }
 .close-article{
     position:absolute;
@@ -46,30 +81,34 @@ audio{
     right:3%;
     background:none;
     font-size:40px;
+    text-shadow:0 0 3px rgb(226, 0, 0);
     border:none;
     cursor:pointer;
-}
-.close-article:focus{
-    outline: none;
 }
 .close-article:hover{
     color: white;
     text-shadow:0 0 3px orangered;
 }
-#publicity-background{
+.publicity-background{
     position:absolute;
-    background-color:rgb(211, 211, 211);
+    top:0;
+    background-color:rgb(0, 0, 0);
     opacity:0.5;
-    width:100vw;
+    width:100%;
     z-index: -1;
 }
-.button{
+.button,.button-empty{
+    text-align:center;
     cursor:pointer;
+}
+.button-empty{
+    background-color: transparent;
+    border:none;
 }
 .rounded-button{
     cursor:pointer;
     border-radius: 50%;
-    border:solid 2vw whitesmoke;
+    border:solid 1px whitesmoke;
 }
 .fade-left{
     transform:translateX(-100%);
@@ -95,18 +134,78 @@ audio{
 .transparent{
     opacity:0.7;
 }
-
+.flex-row, .row-between, .flex-column{
+    display: flex;
+}
+.row-between{
+    justify-content: space-between;
+}
+.flex-column{
+    flex-flow:column;
+}
+.bg-black,.bg-too-black{
+    background-color: rgb(60, 60, 60);
+    color:rgb(220, 220, 220);
+}
+.bg-too-black{
+    background-color: rgb(40, 40, 40);
+}
+.btn-light{
+    background-color:whitesmoke;
+    text-shadow:0 -3px rgb(226, 0, 0);
+    color:rgb(40, 40, 40)
+}
+.btn-light:hover{
+    background-color: rgb(40, 40, 40);
+    text-shadow:0 -3px yellow;
+    color:whitesmoke;
+}
+.btn-light:focus,.close-article:focus{
+    outline:none;
+}
 /*------------------------------------------------MEDIA-----------------------------------------------------*/
-
+@media screen and (min-width:1001px){
+    #publicity-prev{
+        transform:translateX(-30vw)
+    }
+    #publicity-next{
+        transform:translateX(23vw)
+    }
+}
+@media screen and (max-width:1000px){
+    .header-video{
+        height: 40vw;
+    }
+}
 @media screen and (max-width:700px){
     #publicity-carrousel{
         justify-content: space-between;
     }
-}
-
-@media screen and (max-width:400px){
-    .carrousel__prev-item, .carrousel__next-item{
-        opacity:0.5;
+    #publicity-next,#publicity-prev{
+        position: absolute;
+        transform: translateX(0);
         z-index:2;
+    }
+    #publicity-prev{
+        margin-left:10px;
+    }
+    #publicity-next{
+        right:10px;
+    }
+}
+@media screen and (max-width:450px){
+    #publicity-next,#publicity-prev{
+        opacity:0.5;
+    }
+    .publicity{
+        width:90%;
+        height: 100%;
+        min-width: 0;
+        top:0;
+    }
+}
+@media screen and (max-width:300px){
+    .nav{
+        padding:30px 3vw;
     }
 }
