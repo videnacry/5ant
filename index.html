@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="english">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Mininakis</title>
         <link href="Src/style.css" rel="stylesheet">
     </head>
-    <body>
+    <body style="background-color: black">
         <div class="page">
-            <div class="page-header bg-too-black">
+            <div class="page-header bg-too-dark">
                 <iframe src="https://www.youtube.com/embed/wC28zeqfngI?playlist=226rRAesy08"frameborder="0" class="header-video"></iframe>
                 <div class="nav row-between">
-                    <button class="nav-drop button-empty"><h1 class="bg-too-black">=</h1></button>
-                    <h1 class="nav-title"><u>Mininakis</u></h1>
-                    <button class="nav-user button-empty"><h1 class="bg-too-black">8</h1></button>
+                    <button class="nav-drop btn-empty"><h1 class="bg-too-dark">=</h1></button>
+                    <h1 class="nav-title">Mininakis</h1>
+                    <button class="nav-user btn-empty"><h1 class="bg-too-dark">8</h1></button>
                 </div>
             </div>
-            <div class="page-body bg-black">
-                <form>
-                    <fieldset class="flex-column">
-                        <label for="submit-art">We and our fans really appreciate fan art, want to send us yours?</label>
-                        <input id="submit-art" class="hide" type="file">
+            <div class="page-body bg-dark text-center pt-3">
+                <form class="form-suscribe">
+                    <p class="form-text text-md pt-3 pb-3">
+                        Want to get in touch? We can tell you when something shows up, just subscribe!<br>
+                        And we send you a message to the email!
+                    </p>
+                    <fieldset class="mt-3 mb-3">
+                        <input id="suscribe" class="text-md" type="text" placeholder="Enter your email">
+                        <input type="btn" class="btn-dark text-md" value="Subscribe">
                     </fieldset>
                 </form>
-                <div>
                     https://www.theory11.com/
+                <div class="bg-m-dark row-center text-md pt-3 pb-3 mt-3 mb-3">
+                    <div class="card quarter">
+                        <img src="Src/Assets/Profile.jpg" class="card-img entire">
+                        <div class="card-img-overlay col-around">
+                            <div class="card-header">
+                                <h3 class="card-title">First card</h3>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Fast description, give me one</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn-dark bg-too-dark text-md pl-2 pr-2">Play</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card tercium">
+                        <img src="Src/Assets/Profile.jpg" class="card-img entire">
+                        <div class="card-img-overlay col-around">
+                            <div class="card-header">
+                                <h3 class="card-title">First card</h3>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Fast description, give me one</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn-dark bg-too-dark text-md pl-2 pr-2">Play</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card quarter">
+                        <img src="Src/Assets/Profile.jpg" class="card-img entire">
+                        <div class="card-img-overlay col-around">
+                            <div class="card-header">
+                                <h3 class="card-title">First card</h3>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Fast description, give me one</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn-dark bg-too-dark text-md pl-2 pr-2">Play</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,13 +77,13 @@
             <div id="publicity-background" class="publicity-background">
             </div>
             <div id="publicity-carrousel" class="carrousel">
-                <button id="publicity-prev" class="carrousel__prev-item btn-light rounded-button">&laquo;</button>
-                <button id="publicity-next" class="carrousel__next-item btn-light rounded-button">&raquo;</button>
+                <button id="publicity-prev" class="carrousel__prev-item btn-light btn-rounded">&laquo;</button>
+                <button id="publicity-next" class="carrousel__next-item btn-light btn-rounded">&raquo;</button>
                 <article class="publicity">
                     <button class="close-article">x</button>
                     <h1>New stuff!</h1>
                     <h2>Trankilo - 5ant</h2>
-                    <button class="button button-empty" id="play-new-stuff">
+                    <button class="btn btn-empty" id="play-new-stuff">
                         <img src="Src/Assets/play.png" width="30%" class="absolute-center transparent" style="z-index:2;">
                     </button>
                     <audio src="Src/Mp3/Death Note OST 1 - 09 Kitai.mp3"></audio>

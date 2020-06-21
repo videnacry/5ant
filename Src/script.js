@@ -84,3 +84,25 @@ playNewStuff.addEventListener("click",function(){
     newStuff.controls=true
     playNewStuff.querySelector("img").src="Src/Assets/pause.png"
 })
+
+let cardImgOverlay = document.getElementsByClassName("card-img-overlay")
+for(let i = 0; i<cardImgOverlay.length; i++){
+    cardImgOverlay[i].addEventListener("mouseover",function(){
+        cardHover(0,1)
+    })
+    cardImgOverlay[i].addEventListener("mouseout",function(){
+        cardHover(1,0.5)
+    })
+    function cardHover(opacity,opacityImg){
+        let parent=event.currentTarget.parentElement
+        parent.getElementsByClassName("card-img")[0].style.opacity=opacityImg
+        changeStyle("card-text")
+        changeStyle("card-title")
+        function changeStyle(className){
+            let cardElements = parent.getElementsByClassName(className)
+            for(i=0;i<cardElements.length;i++){
+                cardElements[i].style.opacity=opacity
+            }
+        }
+    }
+}
