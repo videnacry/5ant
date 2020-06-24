@@ -3,19 +3,21 @@
     <head lang="english">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Mininakis</title>
-        <link href="Src/style.css" rel="stylesheet">
+        <link href="Src/style.css" rel="stylesheet"><script src="https://kit.fontawesome.com/de217cab6a.js" crossorigin="anonymous"></script>
     </head>
-    <body style="background-color: black">
-        <div class="page">
-            <div class="page-header bg-too-dark">
-                <iframe src="https://www.youtube.com/embed/wC28zeqfngI?playlist=226rRAesy08"frameborder="0" class="header-video"></iframe>
+    <body class="bg-image bg-black">
+        <div class="page bg-transparent-dark">
+            <div class="page-header bg-transparent-violet">
+                <div class="header-video">
+                </div>
+                <iframe src="https://www.youtube.com/embed/wC28zeqfngI?playlist=226rRAesy08"frameborder="0" class="header-video hide"></iframe>
                 <div class="nav row-between">
-                    <button class="nav-drop btn-empty"><h1 class="bg-too-dark">=</h1></button>
+                    <button class="nav-drop btn-empty"><i class="fas fa-bars text-md"></i></button>
                     <h1 class="nav-title">Mininakis</h1>
-                    <button class="nav-user btn-empty"><h1 class="bg-too-dark">8</h1></button>
+                    <button class="nav-cart btn-empty"><i class="fas fa-shopping-cart text-md"></i></button>
                 </div>
             </div>
-            <div class="page-body bg-dark text-center pt-3">
+            <div class="page-body text-center pt-3">
                 <form class="form-suscribe">
                     <p class="form-text text-md pt-3 pb-3">
                         Want to get in touch? We can tell you when something shows up, just subscribe!<br>
@@ -23,10 +25,9 @@
                     </p>
                     <fieldset class="mt-3 mb-3">
                         <input id="suscribe" class="text-md" type="text" placeholder="Enter your email">
-                        <input type="btn" class="btn-dark text-md" value="Subscribe">
+                        <input type="btn" class="btn bg-transparent-violet text-md" value="Subscribe">
                     </fieldset>
                 </form>
-                    https://www.theory11.com/
                 <div class="bg-m-dark row-center text-md pt-3 pb-3 mt-3 mb-3">
                     <div class="card quarter">
                         <img src="Src/Assets/Profile.jpg" class="card-img entire">
@@ -38,7 +39,7 @@
                                 <p class="card-text">Fast description, give me one</p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn-dark bg-too-dark text-md pl-2 pr-2">Play</button>
+                                <button class="btn-dark bg-transparent-violet text-md pl-2 pr-2">Play</button>
                             </div>
                         </div>
                     </div>
@@ -52,7 +53,7 @@
                                 <p class="card-text">Fast description, give me one</p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn-dark bg-too-dark text-md pl-2 pr-2">Play</button>
+                                <button class="btn-dark bg-transparent-violet text-md pl-2 pr-2">Play</button>
                             </div>
                         </div>
                     </div>
@@ -66,14 +67,23 @@
                                 <p class="card-text">Fast description, give me one</p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn-dark bg-too-dark text-md pl-2 pr-2">Play</button>
+                                <button class="btn-dark bg-transparent-violet text-md pl-2 pr-2">Play</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="mt-3 mb-3 pt-3 pb-3 text-md">
+                    <p class="pb-3">
+                        Upload your art! We really appreciate your art works, they'll posted here so anyone can see it 
+                        and get the chance to be shared in our social networks!. 
+                    </p>
+                    <label for="index-send-art"><button class="btn-dark text-md bg-transparent-violet pl-2 pr-2">Upload art</button></label>
+                    <a id="index-send-art" style="display:none"></a> 
+                </div>
             </div>
+            <iframe src="footer.html" width="100%" frameborder="0" class="header-nav"></iframe>
         </div>
-        <div id="publicity-welcome">
+        <div id="publicity-welcome" class="publicity-modal">
             <div id="publicity-background" class="publicity-background">
             </div>
             <div id="publicity-carrousel" class="carrousel">
@@ -86,7 +96,7 @@
                     <button class="btn btn-empty" id="play-new-stuff">
                         <img src="Src/Assets/play.png" width="30%" class="absolute-center transparent" style="z-index:2;">
                     </button>
-                    <audio src="Src/Mp3/Death Note OST 1 - 09 Kitai.mp3"></audio>
+                    <audio src="Src/Mp3/ShanCat - 5ant mininakis.com (Prod beat. Mix tape Seoúl) audio oficial..mp3"></audio>
                     <img src="Src/Assets/Profile.jpg" height="80%" class="background-article">
                 </article>
                 <article class="publicity">
@@ -115,7 +125,7 @@
                     </p>
                 </article>
             </div>
-            <script src="Src/script.js"></script>
         </div>
+        <script src="Src/script.js"></script>
     </body>
 </html>

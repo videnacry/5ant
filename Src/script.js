@@ -1,4 +1,4 @@
-let publicity = document.getElementById("#publicity-background")
+
 let carrousel = createCarrousel("#publicity-carrousel .publicity","publicity-prev","publicity-next")
 let publicityElements = carrousel.elements
 let publicityQuantity = carrousel.quantity
