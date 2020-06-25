@@ -8,9 +8,12 @@
     <body class="bg-image bg-black">
         <div class="page bg-transparent-dark">
             <div class="page-header bg-transparent-violet">
+                <div id="quit-header-video" class="bg-transparent-dark hide"></div>
+                <button class="close-article">x</button>
                 <div class="header-video">
+                    <img src="Src/Assets/play.png" height="30%" id="header-play" class="relative-center btn-empty" alt="">
                 </div>
-                <iframe src="https://www.youtube.com/embed/wC28zeqfngI?playlist=226rRAesy08"frameborder="0" class="header-video hide"></iframe>
+                <iframe src="" frameborder="0" id="header-video" class="hide"></iframe>
                 <div class="nav row-between">
                     <button class="nav-drop btn-empty"><i class="fas fa-bars text-md"></i></button>
                     <h1 class="nav-title">Mininakis</h1>
@@ -25,7 +28,7 @@
                     </p>
                     <fieldset class="mt-3 mb-3">
                         <input id="suscribe" class="text-md" type="text" placeholder="Enter your email">
-                        <input type="btn" class="btn bg-transparent-violet text-md" value="Subscribe">
+                        <input type="button" class="btn-violet bg-transparent-violet text-md" value="Subscribe">
                     </fieldset>
                 </form>
                 <div class="bg-m-dark row-center text-md pt-3 pb-3 mt-3 mb-3">
@@ -39,7 +42,7 @@
                                 <p class="card-text">Fast description, give me one</p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn-dark bg-transparent-violet text-md pl-2 pr-2">Play</button>
+                                <button class="btn-violet bg-transparent-violet text-md pl-2 pr-2">Play</button>
                             </div>
                         </div>
                     </div>
@@ -53,7 +56,7 @@
                                 <p class="card-text">Fast description, give me one</p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn-dark bg-transparent-violet text-md pl-2 pr-2">Play</button>
+                                <button class="btn-violet bg-transparent-violet text-md pl-2 pr-2">Play</button>
                             </div>
                         </div>
                     </div>
@@ -67,7 +70,7 @@
                                 <p class="card-text">Fast description, give me one</p>
                             </div>
                             <div class="card-footer">
-                                <button class="btn-dark bg-transparent-violet text-md pl-2 pr-2">Play</button>
+                                <button class="btn-violet bg-transparent-violet text-md pl-2 pr-2">Play</button>
                             </div>
                         </div>
                     </div>
@@ -77,7 +80,7 @@
                         Upload your art! We really appreciate your art works, they'll posted here so anyone can see it 
                         and get the chance to be shared in our social networks!. 
                     </p>
-                    <label for="index-send-art"><button class="btn-dark text-md bg-transparent-violet pl-2 pr-2">Upload art</button></label>
+                    <label for="index-send-art"><button class="btn-violet text-md bg-transparent-violet pl-2 pr-2">Upload art</button></label>
                     <a id="index-send-art" style="display:none"></a> 
                 </div>
             </div>
@@ -93,9 +96,9 @@
                     <button class="close-article">x</button>
                     <h1>New stuff!</h1>
                     <h2>Trankilo - 5ant</h2>
-                    <button class="btn btn-empty" id="play-new-stuff">
-                        <img src="Src/Assets/play.png" width="30%" class="absolute-center transparent" style="z-index:2;">
-                    </button>
+                    <div>
+                        <img src="Src/Assets/play.png" width="30%" id="play-new-stuff" class="btn-empty absolute-center" style="z-index:2;">
+                    </div>
                     <audio src="Src/Mp3/ShanCat - 5ant mininakis.com (Prod beat. Mix tape Seoúl) audio oficial..mp3"></audio>
                     <img src="Src/Assets/Profile.jpg" height="80%" class="background-article">
                 </article>

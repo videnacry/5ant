@@ -78,11 +78,39 @@ publicityWelcome.addEventListener("click",function(){
 })
 
 let newStuff = document.querySelector(".publicity audio")
+let playing = false
 let playNewStuff = document.getElementById("play-new-stuff")
 playNewStuff.addEventListener("click",function(){
-    newStuff.play()
-    newStuff.controls=true
-    playNewStuff.querySelector("img").src="Src/Assets/pause.png"
+    if(!playing){
+        newStuff.play()
+        newStuff.controls=true
+        playNewStuff.src="Src/Assets/pause.png"
+        playing=true
+    }
+    else{
+        newStuff.pause()
+        newStuff.controls=false
+        playNewStuff.src="Src/Assets/play.png"    
+        playing=false    
+    }
+})
+
+let headerPlay = document.getElementById("header-play")
+let headerVideo = document.getElementById("header-video")
+let quitHeaderVideo = document.getElementById("quit-header-video")
+headerPlay.addEventListener("click",function(){
+    headerPlay.src="Src/Assets/pause.png"
+    headerVideo.src="https://www.youtube.com/embed/wC28zeqfngI?playlist=226rRAesy08&&autoplay=1"
+    headerVideo.classList.remove("hide")
+    headerVideo.classList.add("big-resize")
+    quitHeaderVideo.classList.remove("hide")
+    quitHeaderVideo.classList.add("max-resize")
+})
+quitHeaderVideo.addEventListener("click",function(){
+    headerPlay.src="Src/Assets/play.png"
+    quitHeaderVideo.classList.add("hide")
+    headerVideo.classList.add("hide")
+    headerVideo.src=""
 })
 
 let cardImgOverlay = document.getElementsByClassName("card-img-overlay")
