@@ -98,6 +98,7 @@ playNewStuff.addEventListener("click",function(){
 let headerPlay = document.getElementById("header-play")
 let headerVideo = document.getElementById("header-video")
 let quitHeaderVideo = document.getElementById("quit-header-video")
+let closeHeaderVideo = document.getElementById("close-header-video")
 headerPlay.addEventListener("click",function(){
     headerPlay.src="Src/Assets/pause.png"
     headerVideo.src="https://www.youtube.com/embed/wC28zeqfngI?playlist=226rRAesy08&&autoplay=1"
@@ -105,11 +106,20 @@ headerPlay.addEventListener("click",function(){
     headerVideo.classList.add("big-resize")
     quitHeaderVideo.classList.remove("hide")
     quitHeaderVideo.classList.add("max-resize")
+    closeHeaderVideo.classList.remove("hide")    
 })
 quitHeaderVideo.addEventListener("click",function(){
     headerPlay.src="Src/Assets/play.png"
     quitHeaderVideo.classList.add("hide")
     headerVideo.classList.add("hide")
+    closeHeaderVideo.classList.add("hide")
+    headerVideo.src=""
+})
+closeHeaderVideo.addEventListener("click",function(){
+    headerPlay.src="Src/Assets/play.png"
+    quitHeaderVideo.classList.add("hide")
+    headerVideo.classList.add("hide")
+    closeHeaderVideo.classList.add("hide")
     headerVideo.src=""
 })
 
